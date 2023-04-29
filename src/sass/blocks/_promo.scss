@@ -44,6 +44,7 @@
     
 
     &__title { 
+        // display: none;
         width: 1055px;
         font-weight: 700;
         font-size: 134px;
@@ -52,7 +53,7 @@
         position: relative;
         z-index: 2;
         @include before_circle_big;  
-        span {
+        span.red {
             transition: all 0.5s;
             &:hover {
                 transition: all 0.5s;

@@ -27,6 +27,20 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+
+    <style type="text/css"> /* плавное появление заголовка */
+        #smooth .new { opacity: 0; }
+        #smooth .div_opacity {
+            -webkit-transition: opacity .2s ease;
+            -moz-transition: opacity .2s ease;
+            -ms-transition: opacity .2s ease;
+            -o-transition: opacity .2s ease;
+            transition: opacity .2s ease;
+            opacity: 1;
+        }
+        </style>
+
+
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -115,7 +129,7 @@
         </div>
 
         <div class="container">
-            <h1 class="promo__title">Привет! Меня зовут Саша, я <span>front-end</span> разработчик<img src="icons/macbook.png" alt="" class="promo__macbook animate__animated animate__bounceInDown wow"></h1>
+            <h1 id="smooth" class="promo__title">Привет! Меня зовут Саша, я <span class="red">front-end</span> разработчик <img src="icons/macbook.png" alt="" class="promo__macbook animate__animated animate__bounceInDown wow" data-wow-delay="0.5ss"></h1>
 
             <div class="promo__btns">
                 <a href="#portfolio" class="btn">Портфолио</a>
