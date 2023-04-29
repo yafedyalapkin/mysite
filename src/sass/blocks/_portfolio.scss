@@ -1,0 +1,39 @@
+.portfolio {
+    // display: none;
+    background-color: #1A1A1A;
+    padding-top: 120px;
+    .title {
+        text-align: center;
+        padding-left: 0;
+        padding-top: 5px;
+        &:before {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+    }
+    .title__big {
+        text-align: center;
+    }
+
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 280px);
+        grid-template-rows: (1, 280px);
+        grid-auto-rows: 280px;
+        gap: 10px;
+        justify-content: center;
+    }
+    &__item {
+        img {
+            width: 100%;
+        }
+        &:hover {
+            transition: all 0.8s;
+            transform: scale(1.05); /* увеличиваю масштаб на 5% */
+        }
+    }
+
+}

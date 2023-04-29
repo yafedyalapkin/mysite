@@ -1,0 +1,108 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden; /* скрываем все чтобы кнопки */
+    opacity: 0;
+    transition: all 0.5s;
+    color: #000;
+    &_active {
+        transition: all 0.5s;
+        left: 0;
+        visibility: visible; /* показываем */
+        opacity: 1;
+    }
+
+    &__block {
+        position: relative;
+        width: 345px;
+        background-color: $main-color;
+        height: 100%;
+        transition: all 0.5s;
+        padding-top: 140px;
+        padding-left: 40px;
+        z-index: 10;
+    }
+
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+        &:hover {
+            animation: hamburger 1.5s ease infinite;
+        }
+        
+    }
+
+    &__list {
+        list-style-type: circle;
+        padding-left: 35px;
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        color: #000;
+        transition: all 0.5s;
+        &:hover {
+            animation: hamburger 2s ease infinite;
+        }
+        span {
+            color: #1A1A1A;
+            transition: all 0.5s;
+            
+            // &:hover {
+            //     color: #ededed; 
+            // }
+            
+        }
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            &:hover {
+                color: #000;
+                text-decoration: none;
+                
+            }
+        }
+    }
+
+
+
+
+    &__social {
+        width: 90px;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        a {
+            &:hover {
+                svg {
+                    animation: social 1.5s ease infinite /* forwards */;
+                }
+            }
+        }
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+    }
+}

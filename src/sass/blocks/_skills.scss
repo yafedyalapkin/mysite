@@ -1,0 +1,33 @@
+.skills {
+    // display: none;
+    background-color: #1A1A1A;
+    padding-top: 120px;
+    .title {
+        text-align: center;
+        padding-left: 0;
+        padding-top: 5px;
+        &:before {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+    }
+    .title__big {
+        text-align: center;
+    }
+    &__wrapper {
+        
+        padding-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        column-gap: 40px;
+        justify-items: center;
+        align-items: end;
+        grid-auto-rows: 150px;
+        row-gap: 100px;
+
+
+    }
+    
+}

@@ -1,0 +1,101 @@
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+
+    &:hover {
+        animation: hamburger 1.5s ease infinite;
+        span {
+            transition: all 0.5s;
+            background: #DE654F;
+        }
+    }
+
+    &__line {
+        transition: all 0.5s;
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: #ededed;
+        &_middle {
+            width: 36px;
+        }
+    }
+}
+
+
+
+
+
+.promo {
+    min-height: 100vh; /* подстраивается под любой экран */
+    position: relative;
+    background: #1A1A1A;
+    // padding-top: 140px;  
+    padding-top: 120px;
+    // padding-left: 40px;
+    // padding-right: 40px;  
+    
+
+    &__title { 
+        width: 1055px;
+        font-weight: 700;
+        font-size: 134px;
+        line-height: 140px;
+        color: #ededed;
+        position: relative;
+        z-index: 2;
+        @include before_circle_big;  
+        span {
+            transition: all 0.5s;
+            &:hover {
+                transition: all 0.5s;
+                cursor: cell;
+                color:#ff3b18;
+                // text-shadow: #ededed 2px 0px, #ededed 1px 1px, #ededed 0px 1px, #ededed -1px 1px, #ededed -1px 0px, #ededed -1px -1px, #ededed 0px -1px, #ededed 1px -1px;
+            }
+        }
+    }
+    &__macbook {
+        position: absolute;
+        bottom: 1px;
+        width: 250px;
+        bottom: 8px;
+        right: -10px;
+    }
+
+    &__btns {
+        margin-top: 50px;
+        width: 240px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+         
+        
+    }
+    &__link {
+        height: 45px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        color: #ededed;
+        
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        transition: all 0.5s;
+        &:hover {
+            transition: all 0.5s;
+            color: #DE654F;
+            text-decoration: none;
+        }
+    }
+}
