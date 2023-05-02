@@ -30,13 +30,13 @@ $(document).ready(function(){
                     return '<span class="new">' + p2 + '</span>';
                 }));
                 $this.find('span.new').each(function(i, el){
-                    setTimeout(function(){ $(el).addClass('div_opacity'); }, 30 * i);
+                    setTimeout(function(){ $(el).addClass('div_opacity'); }, 20 * i);
                 });
             });
         };
         $('#smooth').show();
         $('#smooth').animate_Text();
-        $('#smooth').append('<img src="icons/macbook.png" alt="" class="promo__macbook animate__animated animate__bounceInDown wow" data-wow-delay="1.2s">');
+        $('#smooth').append('<img src="icons/macbook.png" alt="" class="promo__macbook animate__animated animate__bounceInDown wow" data-wow-delay="0.7s">');
     });
 
 
